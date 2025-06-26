@@ -28,7 +28,14 @@
     <section class="hero-bg min-h-screen flex items-center relative">
         <div class="circuit-pattern"></div>
         <div class="container mx-auto px-4 py-20 relative z-10">
-            <div class="max-w-4xl mx-auto text-center">                <div class="inline-block bg-black bg-opacity-50 px-4 py-2 rounded-full mb-6 neon-border">
+            <div class="max-w-4xl mx-auto text-center">
+                <!-- SuperFVPS Logo -->
+                <div class="m-60">
+                    <img src="./images//logo-trans.png" alt="SuperFVPS Logo" class="mx-auto h-60
+                     w-auto  floating-element">
+                </div>
+                
+                <div class="inline-block bg-black bg-opacity-50 px-4 py-2 rounded-full mb-8 neon-border">
                     <span class="text-neon-green font-bold">Giá chỉ từ 50K/tháng</span>
                 </div>
                 <h1 class="text-4xl md:text-6xl font-bold mb-6 neon-glow floating-element">
@@ -50,13 +57,14 @@
 
     <!-- Trust & Stats Bar -->
     <section class="py-12 bg-card-dark">
-        <div class="container mx-auto px-4">            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="container mx-auto px-4">            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div class="hover-lift">
-                    <div class="stats-counter text-neon-green text-4xl font-bold mb-2">10,000+</div>
+                    <div class="stats-counter text-neon-green text-4xl font-bold mb-2">10000+</div>
                     <div class="text-gray-400">Khách Hàng Tin Tưởng</div>
                 </div>
                 <div class="hover-lift">
-                    <div class="stats-counter text-neon-green text-4xl font-bold mb-2">99.9%</div>
+                    <div class="stats-counter text-neon-green text-4xl font-bold mb-2">99%</div>
                     <div class="text-gray-400">Uptime</div>
                 </div>
                 <div class="hover-lift">
@@ -87,7 +95,8 @@
 
     <!-- How It Works Section -->
     <section class="py-20">
-        <div class="container mx-auto px-4">            <div class="text-center mb-16">
+        <div class="container mx-auto px-4">            
+            <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Cách Thức Hoạt Động</h2>
                 <p class="text-gray-400 max-w-2xl mx-auto">Khởi tạo VPS chỉ trong 3 bước đơn giản</p>
             </div>
@@ -121,16 +130,19 @@
 
     <!-- Plan Showcase -->
     <section class="py-20 bg-card-dark">
-        <div class="container mx-auto px-4">            <div class="text-center mb-16">
+        <div class="container mx-auto px-4">            
+            <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Chọn Gói VPS Của Bạn</h2>
                 <p class="text-gray-400 max-w-2xl mx-auto">Các gói VPS linh hoạt phù hợp với mọi nhu cầu</p>
                 
                 <div class="mt-8 inline-flex bg-gray-900 p-1 rounded-lg">
-                    <button class="px-6 py-3 rounded-lg font-medium bg-neon-green text-black">VPS Gold</button>
-                    <button class="px-6 py-3 rounded-lg font-medium">VPS Platinum</button>
+                    <button id="vps-gold-tab" class="px-6 py-3 rounded-lg font-medium bg-neon-green text-black transition">VPS Gold</button>
+                    <button id="vps-platinum-tab" class="px-6 py-3 rounded-lg font-medium text-white transition">VPS Platinum</button>
                 </div>
             </div>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            
+            <!-- VPS Gold Plans -->
+            <div id="vps-gold-plans" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <!-- VPS Gold Giá Rẻ -->
                 <div class="plan-card bg-dark-bg p-8 rounded-xl">
                     <h3 class="text-2xl font-bold mb-2">VPS Gold Giá Rẻ</h3>
@@ -192,11 +204,45 @@
                         Đăng Ký Ngay
                     </button>
                 </div>
-                
-                <!-- VPS Platinum -->
+            </div>
+            
+            <!-- VPS Platinum Plans -->
+            <div id="vps-platinum-plans" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto hidden">
+                <!-- VPS Platinum Giá Rẻ -->
                 <div class="plan-card bg-dark-bg p-8 rounded-xl">
-                    <h3 class="text-2xl font-bold mb-2">VPS Platinum</h3>
-                    <div class="text-neon-green text-3xl font-bold mb-4">85,000đ<span class="text-gray-400 text-lg">/tháng</span></div>
+                    <h3 class="text-2xl font-bold mb-2">VPS Platinum Giá Rẻ</h3>
+                    <div class="text-neon-green text-3xl font-bold mb-4">60,000đ<span class="text-gray-400 text-lg">/tháng</span></div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-neon-green mr-3"></i>
+                            <span>Intel Xeon Platinum 8272CL</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-neon-green mr-3"></i>
+                            <span>1 CPU Core</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-neon-green mr-3"></i>
+                            <span>1GB RAM</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-neon-green mr-3"></i>
+                            <span>25GB SSD NVMe</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-neon-green mr-3"></i>
+                            <span>IP Việt Nam</span>
+                        </li>
+                    </ul>
+                    <button class="w-full py-3 interactive-button bg-gray-800 rounded-lg font-medium hover:bg-gray-700 transition">
+                        Đăng Ký Ngay
+                    </button>
+                </div>
+                
+                <!-- VPS Platinum (Hero Plan) -->
+                <div class="plan-card hero-plan bg-dark-bg p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-2 gradient-text">VPS Platinum</h3>
+                    <div class="text-neon-green text-3xl font-bold mb-4 stats-counter">85,000đ<span class="text-gray-400 text-lg">/tháng</span></div>
                     <ul class="space-y-4 mb-8">
                         <li class="flex items-center hover-lift">
                             <i class="fas fa-check-circle text-neon-green mr-3"></i>
@@ -212,14 +258,14 @@
                         </li>
                         <li class="flex items-center hover-lift">
                             <i class="fas fa-check-circle text-neon-green mr-3"></i>
-                            <span>40GB SSD NVMe</span>
+                            <span>50GB SSD NVMe</span>
                         </li>
                         <li class="flex items-center hover-lift">
                             <i class="fas fa-check-circle text-neon-green mr-3"></i>
                             <span>Hiệu suất cao hơn 25%</span>
                         </li>
                     </ul>
-                    <button class="w-full py-3 interactive-button bg-gray-800 rounded-lg font-medium hover:bg-gray-700 transition">
+                    <button class="w-full py-3 neon-button rounded-lg font-medium text-neon-green">
                         Đăng Ký Ngay
                     </button>
                 </div>
@@ -490,6 +536,10 @@
         src='https://cdn.jotfor.ms/agent/embedjs/019765ec7e3076008cd2402683b2cd337e34/embed.js?skipWelcome=1&maximizable=1'>
         </script>
     </footer>    
+    
+    <!-- Gemini AI Chatbot Integration - Add/Remove this line to enable/disable chatbot -->
+    <!-- <script src="./Gemini/gemini-chatbot.js"></script> -->
+    
     <script src="script.js"></script>
 </body>
 </html>

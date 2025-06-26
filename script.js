@@ -1,5 +1,4 @@
-
-        // Accordion functionality
+// Accordion functionality
         document.querySelectorAll('.accordion-header').forEach(header => {
             header.addEventListener('click', () => {
                 const content = header.nextElementSibling;
@@ -155,3 +154,37 @@
                 }
             });
         });
+        
+        // VPS Plan Tab Switching
+        const goldTab = document.getElementById('vps-gold-tab');
+        const platinumTab = document.getElementById('vps-platinum-tab');
+        const goldPlans = document.getElementById('vps-gold-plans');
+        const platinumPlans = document.getElementById('vps-platinum-plans');
+
+        function switchToGoldTab() {
+            // Update tab buttons
+            goldTab.classList.add('bg-neon-green', 'text-black');
+            goldTab.classList.remove('text-white');
+            platinumTab.classList.remove('bg-neon-green', 'text-black');
+            platinumTab.classList.add('text-white');
+            
+            // Show/hide plan containers
+            goldPlans.classList.remove('hidden');
+            platinumPlans.classList.add('hidden');
+        }
+
+        function switchToPlatinumTab() {
+            // Update tab buttons
+            platinumTab.classList.add('bg-neon-green', 'text-black');
+            platinumTab.classList.remove('text-white');
+            goldTab.classList.remove('bg-neon-green', 'text-black');
+            goldTab.classList.add('text-white');
+            
+            // Show/hide plan containers
+            platinumPlans.classList.remove('hidden');
+            goldPlans.classList.add('hidden');
+        }
+
+        // Add event listeners
+        goldTab.addEventListener('click', switchToGoldTab);
+        platinumTab.addEventListener('click', switchToPlatinumTab);

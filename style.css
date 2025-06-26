@@ -208,7 +208,7 @@
         .hero-plan::after {
             content: "POPULAR";
             position: absolute;
-            top: -15px;
+            top: -5px;
             right: 20px;
             background: linear-gradient(45deg, #39FF14, #32E612);
             color: #0a0a0a;

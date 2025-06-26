@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Test</title>
+    <style>
+        body {
+            background: #0a0a0a;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .test-info {
+            background: #121212;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-info">
+        <h1>Gemini Chatbot Test Page</h1>
+        <p>This page is for testing the Gemini chatbot integration.</p>
+        <p>Open browser console (F12) to see debug messages.</p>
+        <p>The chatbot button should appear in the bottom-right corner.</p>
+    </div>
+
+    <!-- Gemini AI Chatbot Integration -->
+    <script src="./Gemini/gemini-chatbot.js"></script>
+
+    <script>
+        // Additional debugging
+        window.addEventListener('load', () => {
+            console.log('Test page fully loaded');
+            setTimeout(() => {
+                const toggle = document.getElementById('chatbot-toggle');
+                if (toggle) {
+                    console.log('✅ Chatbot toggle button found!');
+                } else {
+                    console.log('❌ Chatbot toggle button NOT found');
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+    <!-- Chatbot Toggle Button -->
+    <div id="chatbot-toggle" class="chatbot-toggle">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <!-- Chatbot Container -->
+    <div id="chatbot-container" class="chatbot-container">
+        <div class="chatbot-header">
+            <div class="chatbot-title">
+                <i class="fas fa-robot"></i>
+                <span>AI Assistant</span>
+            </div>
+            <div class="chatbot-controls">
+                <button id="chatbot-minimize" class="control-btn">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button id="chatbot-close" class="control-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="chatbot-messages" class="chatbot-messages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <i class="fas fa-robot message-avatar"></i>
+                    <div class="message-text">
+                        Xin chào! Tôi là trợ lý AI của VPS Siêu Tốc. Tôi có thể giúp bạn tìm hiểu về các dịch vụ VPS, giải đáp thắc mắc kỹ thuật, hoặc hỗ trợ bạn chọn gói VPS phù hợp. Bạn cần hỗ trợ gì?
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chatbot-input">
+            <div class="input-container">
+                <textarea 
+                    id="chatbot-input-field" 
+                    placeholder="Nhập tin nhắn của bạn..." 
+                    rows="1"
+                ></textarea>
+                <button id="chatbot-send" class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="chatbot-footer">
+                <small>Powered by Google Gemini AI</small>
+            </div>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>

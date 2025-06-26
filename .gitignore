@@ -1,0 +1,21 @@
+# Ignore API keys and sensitive configuration
+Gemini/config.js
+*.env
+.env.local
+.env.development
+.env.production
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.log
