@@ -395,6 +395,9 @@
         .stats-counter {
             font-family: 'Orbitron', monospace;
             animation: counterGlow 3s ease-in-out infinite alternate;
+            white-space: nowrap;
+            display: inline-block;
+            min-width: fit-content;
         }
         
         @keyframes counterGlow {
@@ -495,4 +498,24 @@
         .logo-text {
             font-family: 'Orbitron', monospace;
             font-weight: 900;
+        }
+
+        /* Mobile responsive fixes for stats display */
+        @media (max-width: 768px) {
+            .stats-counter {
+                font-size: 2rem !important;
+                line-height: 1.2;
+                letter-spacing: 0.05em;
+            }
+            
+            .hover-lift {
+                min-width: 120px;
+                padding: 0 8px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stats-counter {
+                font-size: 1.75rem !important;
+            }
         }

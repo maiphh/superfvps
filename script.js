@@ -83,6 +83,12 @@
         
         function animateCounter(element) {
             const text = element.textContent;
+            
+            // Special handling for "24/7" - don't animate this text
+            if (text.includes('/')) {
+                return;
+            }
+            
             const number = parseInt(text.replace(/[^\d]/g, ''));
             const suffix = text.replace(/[\d]/g, '');
             

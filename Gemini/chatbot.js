@@ -19,7 +19,7 @@ class GeminiChatbot {
 
     getApiKey() {
         // Try to get from environment variable first (for production)
-        if (typeof process !== 'undefined' && process.env && process.env.GEMINI_API_KEY) {
+        if (typeof process !== 'undefined' && process.env && process.env.NEXT_PUBLIC_GEMINI_API_KEY) {
             return process.env.GEMINI_API_KEY;
         }
         
@@ -96,8 +96,8 @@ Sản phẩm chính:
    - VPS Gold: 75,000đ/tháng (2 CPU Cores, 2GB RAM, 40GB SSD NVMe, Full Root Access)
 
 2. VPS Platinum:
-   - VPS Platinum Giá Rẻ: 70,000đ/tháng (1 CPU Core, 1GB RAM, 25GB SSD NVMe, Intel Xeon Platinum 8272CL)
-   - VPS Platinum: 95,000đ/tháng (2 CPU Cores, 2GB RAM, 50GB SSD NVMe, hiệu suất cao hơn 25%)
+   - VPS Platinum Giá Rẻ: 60,000đ/tháng (1 CPU Core, 1GB RAM, 25GB SSD NVMe, Intel Xeon Platinum 8272CL)
+   - VPS Platinum: 85,000đ/tháng (2 CPU Cores, 2GB RAM, 50GB SSD NVMe, hiệu suất cao hơn 25%)
 
 Tính năng nổi bật:
 - CPU Intel Xeon Gold 6148 và Platinum 8272CL
